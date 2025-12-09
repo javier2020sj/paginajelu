@@ -125,13 +125,14 @@ body {
 .artistic-hero {
   width: 100%;
   height: 80vh;
-  background-image: url("header.jpg");
+  background-image: url("img/head1.jpeg");
   background-size: cover;       /* IMPORTANTE: llena todo */
-  background-position: center top;  /* Centra la imagen */
+  background-position: center -40rem;  /* Centra la imagen */
   background-repeat: no-repeat; /* Evita repeticiones */
   position:relative;
-  offset-position: 100;
+  offset-position: 100  ;
 }
+
 .hero-overlay {
   position:absolute;
   width:100%;
@@ -166,12 +167,15 @@ body {
   padding-top: 10rem;
 }
 .soft-card {
+  display: grid;
+  height: 30rem; /* Alto fijo */
   background: var(--blanco);
   border-radius: 12px;
   padding: 20px;
   border: 1px solid #eee;
   transition: .3s;
   text-align: center;
+  text-justify: center;
 }
 .soft-card:hover {
   transform: translateY(-6px);
@@ -363,7 +367,12 @@ body {
   background: #fff;
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
-
+.img-sobre{
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
 .staff-img {
   width: 200px;
   height: 200px;
@@ -384,3 +393,206 @@ body {
   font-size: 0.95rem;
   line-height: 1.6;
 }
+
+.social-icon {
+  font-size: 2.4rem;
+  margin: 0 12px;
+  color: #f4b400; /* Amarillo institucional */
+  transition: 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #000;
+  transform: scale(1.15);
+}
+
+
+
+
+/* El modal ocupa casi toda la pantalla */
+#modalImagen .modal-dialog {
+  max-width: 95%;
+  margin: auto;
+}
+
+/* El contenido no tiene bordes ni fondo */
+#modalImagen .modal-content {
+  background: transparent;
+  border: none;
+}
+
+/* La imagen se adapta perfectamente al espacio disponible */
+#modalImagen img {
+  width: 100%;
+  height: auto;
+  max-height: 90vh; /* Nunca ocupa más del 90% del alto */
+  object-fit: contain; /* Mantiene proporciones */
+}
+
+body.modal-open {
+  padding-right: 0 !important;
+  overflow-y: hidden;
+}
+/* Contenedor del modal */
+.modal-img-wrapper {
+  background: transparent;
+  border: none;
+  position: relative;
+}
+
+/* Botón X */
+.modal-close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  padding: 10px;
+  backdrop-filter: blur(4px);
+  transition: 0.3s ease;
+}
+
+/* Hover elegante */
+.modal-close-btn:hover {
+  background-color: rgba(255, 255, 255, 1);
+  transform: scale(1.1);
+}
+/* Fondo del botón */
+.accordion-button {
+  background-color: #f4c842 !important; /* Amarillo JELÚ */
+  color: #000 !important;
+  font-weight: 600;
+}
+
+/* Flecha (icono de Bootstrap) */
+.accordion-button::after {
+  filter: invert(0); /* negra */
+  
+}
+
+/* Botón cuando está abierto */
+.accordion-button:not(.collapsed) {
+  background-color: #eabf35 !important;
+  color: #000 !important;
+  box-shadow: none;
+}
+
+/* Fondo del contenido */
+.accordion-body {
+  background: #fff9d9; /* amarillo muy suave */
+  color: #333;
+  border-top: 1px solid #e0c04d;
+}
+
+/* Borde de cada item */
+.accordion-item {
+  border: 1px solid #f0cc4e !important;
+  border-radius: 8px;
+  overflow: hidden;
+
+}
+
+
+
+
+
+
+/* ---------------------------------------
+   🎨 PAPEL ENVEJECIDO + BORDES COSIDOS
+------------------------------------------ */
+
+.accordion-item {
+  background: url("img/papel-textura.jpg");
+  background-size: cover;
+  background-position: center;
+  border: 3px solid #d2a446 !important; /* tono dorado viejo */
+  border-radius: 14px;
+  margin-bottom: 16px;
+  padding: 0;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+  overflow: hidden;
+}
+
+/* Costura alrededor del borde */
+.accordion-item::after {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  border: 2px dashed rgba(110, 70, 20, 0.6);
+  border-radius: 10px;
+  pointer-events: none;
+}
+
+/* ---------------------------------------
+ 📘 EFECTO DE HOJA DOBLADA EN LA ESQUINA
+------------------------------------------ */
+.accordion-item::before {
+  content: "";
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  top: 0;
+  right: 0;
+  background: linear-gradient(135deg, transparent 50%, rgba(0,0,0,0.15));
+  clip-path: polygon(0 0, 100% 0, 100% 100%);
+  z-index: 5;
+}
+
+/* ---------------------------------------
+ 🖋 TÍTULOS MANUSCRITOS
+------------------------------------------ */
+
+.accordion-button {
+  background: rgba(255, 240, 200, 0.85) !important;
+  font-family: 'Homemade Apple', cursive;
+  font-size: 1.35rem;
+  font-weight: bold;
+  color: #4e3300 !important;
+  padding: 20px;
+  border-bottom: 2px solid #b88d2b;
+  text-shadow: 1px 1px rgba(255,255,255,0.3);
+  transition: 0.3s ease;
+}
+
+.accordion-button:not(.collapsed) {
+  background: rgba(255, 230, 180, 0.95) !important;
+  color: #3d2800 !important;
+}
+
+/* Icono flecha */
+.accordion-button::after {
+  filter: invert(26%) sepia(40%) saturate(600%) hue-rotate(10deg);
+}
+
+/* ---------------------------------------
+ ✨ ANIMACIÓN DE “PASAR LA PÁGINA”
+------------------------------------------ */
+
+.accordion-collapse {
+  overflow: hidden;
+}
+
+.accordion-body {
+  padding: 22px;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #3a2b14;
+  background: rgba(255, 248, 230, 0.8);
+  animation: pageTurn 0.45s ease forwards;
+  border-radius: 0 0 14px 14px;
+}
+
+@keyframes pageTurn {
+  from {
+      opacity: 0;
+      transform: rotateX(-12deg) translateY(-8px);
+      transform-origin: top;
+  }
+  to {
+      opacity: 1;
+      transform: rotateX(0deg) translateY(0);
+  }
+}
+
