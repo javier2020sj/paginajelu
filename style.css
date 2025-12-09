@@ -1,0 +1,309 @@
+/* -----------------------------------------
+   PALETA
+------------------------------------------ */
+:root {
+  --amarillo: #f5c400;
+  --nude: #fff7e8;
+  --gris-texto: #333;
+  --gris-claro: #f5f5f5;
+  --blanco: #fff;
+}
+
+/* -----------------------------------------
+ TIPOGRAFÍA
+------------------------------------------ */
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--gris-texto);
+}
+
+/* -----------------------------------------
+ NAVBAR GLASS
+------------------------------------------ */
+.glass-navbar {
+  backdrop-filter: blur(12px);
+  background: rgba(255,255,255,0.65) !important;
+  padding: 12px 0;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.artistic-logo {
+  font-family: "Playfair Display";
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--gris-texto) !important;
+}
+
+.nav-art {
+  color: var(--gris-texto) !important;
+  font-weight: 500;
+}
+.nav-art:hover {
+  color: var(--amarillo) !important;
+}
+
+/* -----------------------------------------
+ HAMBURGUESA PERSONALIZADA
+------------------------------------------ */
+.navbar-toggler-icon { display:none!important; }
+
+/* Botón hamburguesa limpio */
+.custom-hamburger {
+  width: 40px;
+  height: 32px;
+  border: none;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 6px;
+  cursor: pointer;
+}
+
+/* Las tres líneas */
+.hamburger-line {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: var(--gris-texto); /* Podés usar amarillo si querés */
+  border-radius: 4px;
+}
+
+.hamburger-lines::before,
+.hamburger-lines::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 3px;
+  background: var(--gris-texto);
+}
+.hamburger-lines::before { top:-8px; }
+.hamburger-lines::after  { top: 8px; }
+/* Eliminar por completo el ícono interno que Bootstrap agrega */
+.navbar-toggler::after,
+.navbar-toggler::before {
+    display: none !important;
+    content: none !important;
+}
+
+/* Asegurar que el botón no tenga background extraño */
+.navbar-toggler {
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+/* -----------------------------------------
+ HERO ARTÍSTICO
+------------------------------------------ */
+
+.artistic-hero {
+  width: 100%;
+  height: 80vh;
+  background-image: url("header.jpg");
+  background-size: cover;       /* IMPORTANTE: llena todo */
+  background-position: center top;  /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita repeticiones */
+  position:relative;
+  offset-position: 100;
+}
+.hero-overlay {
+  position:absolute;
+  width:100%;
+  height:100%;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.2), rgba(255,255,255,0.9));
+}
+.hero-logo { width:160px; margin-bottom:20px; }
+.hero-title {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffffff; /* Blanco puro */
+  text-shadow: 0 3px 10px rgba(0,0,0,0.6); /* Sombra suave luminosa */
+}
+.hero-subtitle { opacity:.8; }
+
+/* -----------------------------------------
+ TARJETAS SUAVES
+------------------------------------------ */
+.section-soft {
+  background: var(--nude);
+}
+
+.soft-card {
+  background: var(--blanco);
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid #eee;
+  transition: .3s;
+  text-align: center;
+}
+.soft-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+}
+
+.artistic-title {
+  font-family: "Playfair Display";
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+/* -----------------------------------------
+ CURSOS — ANIMACIÓN FLIP 3D
+------------------------------------------ */
+.flip-card {
+  width: 320px;
+  height: 420px;
+  perspective: 1000px;
+}
+
+.flip-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform .8s;
+}
+
+.flip-card:hover .flip-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-front,
+.flip-back {
+  position:absolute;
+  width:100%;
+  height:100%;
+  backface-visibility:hidden;
+  border-radius:14px;
+  overflow:hidden;
+  display:flex;
+  justify-content:center;
+  align-items:flex-end;
+  padding:20px;
+  color:white;
+}
+
+.flip-front {
+  background-size:cover;
+  background-position:center;
+}
+
+.flip-title {
+  font-size:1.6rem;
+  font-family:"Playfair Display";
+  background:rgba(0,0,0,0.4);
+  padding:10px 20px;
+  border-radius:6px;
+}
+
+.flip-back {
+  background: linear-gradient(135deg, var(--amarillo), #ffe5a5);
+  transform: rotateY(180deg);
+  justify-content:center;
+  align-items:center;
+  padding:30px;
+  color:var(--gris-texto);
+  font-size:1.2rem;
+  text-align:center;
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 en desktop */
+  gap: 30px;
+  justify-items: center;
+}
+
+/* Tablet: 2 por fila */
+@media (max-width: 992px) {
+  .courses-grid {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile: 1 por fila */
+@media (max-width: 768px) {
+  .courses-grid {
+      grid-template-columns: 1fr;
+  }
+}
+
+/* Ajustes de tamaño y centrado */
+.flip-card {
+  width: 100%;
+  max-width: 320px;
+  height: 420px;
+}
+
+/* -----------------------------------------
+ GALERÍA
+------------------------------------------ */
+.artistic-gradient {
+  background: linear-gradient(135deg, var(--amarillo), #ffe9a8);
+}
+
+.gallery-img {
+  height:400px;
+  object-fit:cover;
+  border-radius:12px;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.75); /* Fondo oscuro visible */
+    background-size: 20px 20px;
+    border-radius: 50%;
+    padding: 18px;
+    filter: invert(1); /* Voltea el ícono a blanco */
+}
+
+/* Aumentar tamaño del botón contenedor */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 70px; /* Área clickable más grande */
+}
+
+/* Hover para estilo profesional */
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    background-color: rgba(0, 0, 0, 0.95);
+    transform: scale(1.15);
+    transition: 0.2s ease-in-out;
+}
+
+/* Sombra suave */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+/* -----------------------------------------
+ FORMULARIO
+------------------------------------------ */
+.form-soft {
+  background:var(--gris-claro);
+  border:none;
+  border-radius:8px;
+}
+
+.artistic-btn {
+  background:var(--amarillo);
+  border:none;
+  border-radius:30px;
+  font-weight:600;
+}
+.artistic-btn:hover { background:#e2b107; }
+
+/* -----------------------------------------
+ FOOTER
+------------------------------------------ */
+.soft-footer {
+  background:var(--nude);
+  margin-top:50px;
+}
+
+.map {
+  width:100%;
+  height:280px;
+  border:none;
+  border-radius:12px;
+}

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Estudio de Danza Jelú – Muestra de Fin de Año</title>
+
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Alpine.js para modales y carrusel -->
+<script src="//unpkg.com/alpinejs" defer></script>
+
+<style>
+    body { scroll-behavior: smooth; }
+</style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+<!-- NAVBAR -->
+<nav class="fixed w-full bg-yellow-300 shadow z-50">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+        <h1 class="font-bold text-xl text-gray-900">JELÚ</h1>
+        <ul class="hidden md:flex gap-6 font-semibold">
+            <li><a href="#inicio" class="hover:text-white">Inicio</a></li>
+            <li><a href="#instituto" class="hover:text-white">Instituto</a></li>
+            <li><a href="#obra" class="hover:text-white">Obra</a></li>
+            <li><a href="#programa" class="hover:text-white">Programa</a></li>
+            <li><a href="#profes" class="hover:text-white">Profesores</a></li>
+            <li><a href="#contacto" class="hover:text-white">Contacto</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- HEADER -->
+<header id="inicio" class="h-screen bg-cover bg-center flex flex-col justify-center items-center text-white text-center"
+    style="background-image: url('https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e'); margin-top: 60px;">
+    <h1 class="text-5xl font-bold drop-shadow-xl">Estudio de Danza Jelú</h1>
+    <p class="text-2xl mt-4 drop-shadow-lg">Muestra de Fin de Año</p>
+</header>
+
+<!-- SECCIÓN INSTITUTO -->
+<section id="instituto" class="max-w-4xl mx-auto py-16 px-6">
+    <h2 class="text-3xl font-bold border-l-8 border-yellow-300 pl-3 mb-6">Sobre el Instituto</h2>
+    <p class="text-lg leading-relaxed">
+        Jelú es un espacio artístico donde la danza y la música se viven con pasión, disciplina y libertad creativa. 
+        Nuestro enfoque integra formación técnica con el desarrollo emocional y expresivo de cada estudiante.
+    </p>
+</section>
+
+<!-- OBRA -->
+<section id="obra" class="max-w-4xl mx-auto py-16 px-6">
+    <h2 class="text-3xl font-bold border-l-8 border-yellow-300 pl-3 mb-6">Descripción de la Obra</h2>
+    <p class="text-lg leading-relaxed">
+        La obra de este año combina danza contemporánea, telas, ritmos urbanos y danza árabe en un viaje emocional 
+        interpretado por nuestras bailarinas y bailarines. Una puesta visual y escénica llena de energía y sensibilidad.
+    </p>
+</section>
+
+<!-- CARRUSEL -->
+<section class="py-16 max-w-5xl mx-auto">
+    <h2 class="text-3xl font-bold mb-8 border-l-8 border-yellow-300 pl-3">Galería</h2>
+
+    <div x-data="{ active: 0, imgs: [
+        'https://images.unsplash.com/photo-1515165562835-c4c5b39a7f38',
+        'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e',
+        'https://images.unsplash.com/photo-1487412912498-0447578fcca8'
+    ] }"
+    x-init="setInterval(() => active = (active + 1) % imgs.length, 3500)"
+    class="relative w-full h-80 overflow-hidden rounded-xl shadow-lg">
+
+        <template x-for="(img, i) in imgs">
+            <img :src="img" class="absolute inset-0 w-full h-full object-cover transition-all duration-700"
+                 :class="active === i ? 'opacity-100' : 'opacity-0'">
+        </template>
+    </div>
+</section>
+
+<!-- PROGRAMA -->
+<section id="programa" class="max-w-4xl mx-auto py-16 px-6">
+    <h2 class="text-3xl font-bold mb-6 border-l-8 border-yellow-300 pl-3">Programa</h2>
+
+    <div class="space-y-4">
+        <!-- Acto -->
+        <div x-data="{ open: false }" class="bg-white p-5 rounded-lg shadow cursor-pointer">
+            <h3 @click="open = !open" class="text-xl font-semibold">Acto 1 – Amanecer</h3>
+            <div x-show="open" class="mt-3">
+                <p>Una coreografía que simboliza el despertar artístico.</p>
+                <img src="https://images.unsplash.com/photo-1487412912498-0447578fcca8"
+                     class="mt-3 rounded-lg shadow">
+            </div>
+        </div>
+
+        <div x-data="{ open: false }" class="bg-white p-5 rounded-lg shadow cursor-pointer">
+            <h3 @click="open = !open" class="text-xl font-semibold">Acto 2 – Raíces</h3>
+            <div x-show="open" class="mt-3">
+                <p>Un homenaje a los orígenes y la identidad cultural.</p>
+                <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e"
+                     class="mt-3 rounded-lg shadow">
+            </div>
+        </div>
+
+        <div x-data="{ open: false }" class="bg-white p-5 rounded-lg shadow cursor-pointer">
+            <h3 @click="open = !open" class="text-xl font-semibold">Acto 3 – Vuelo</h3>
+            <div x-show="open" class="mt-3">
+                <p>El cierre donde la libertad se expresa en movimiento.</p>
+                <img src="https://images.unsplash.com/photo-1515165562835-c4c5b39a7f38"
+                     class="mt-3 rounded-lg shadow">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PROFESORES -->
+<section id="profes" class="max-w-4xl mx-auto py-16 px-6">
+    <h2 class="text-3xl font-bold border-l-8 border-yellow-300 pl-3 mb-6">Profesores</h2>
+    <ul class="text-lg space-y-2">
+        <li><strong>Ana Torres</strong> – Danza Contemporánea</li>
+        <li><strong>Lucía Benavídez</strong> – Danza Árabe</li>
+        <li><strong>Mariana Ríos</strong> – Telas</li>
+        <li><strong>Gabriel Torres</strong> – Música y Ritmos Urbanos</li>
+    </ul>
+</section>
+
+<!-- MAPA -->
+<section class="max-w-5xl mx-auto py-16 px-6">
+    <h2 class="text-3xl font-bold border-l-8 border-yellow-300 pl-3 mb-6">Dirección del Teatro</h2>
+    <p class="mb-4">Complejo Jelú, San Juan, Argentina.</p>
+    
+    <iframe 
+        class="w-full h-80 rounded-lg shadow"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3394.482041874775!2d-68.537!3d-31.537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzHCsDMyJzEzLjMiUyA2OMKwMzInMTMuMiJX!5e0!3m2!1ses!2sar!4v0000000000"
+        allowfullscreen loading="lazy">
+    </iframe>
+</section>
+
+<!-- FORMULARIO -->
+<section id="contacto" class="max-w-3xl mx-auto py-16 px-6">
+    <h2 class="text-3xl font-bold border-l-8 border-yellow-300 pl-3 mb-6">Contacto</h2>
+
+    <form class="bg-white p-8 rounded-xl shadow space-y-4"
+          action="mailto:info@jelu.com" method="post" enctype="text/plain">
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <input name="nombre" placeholder="Nombre" required class="border p-3 rounded">
+            <input name="apellido" placeholder="Apellido" required class="border p-3 rounded">
+            <input type="email" name="email" placeholder="Email" required class="border p-3 rounded">
+            <input name="telefono" placeholder="Teléfono" class="border p-3 rounded">
+        </div>
+
+        <select name="disciplina" class="border p-3 rounded w-full">
+            <option value="">Seleccionar disciplina</option>
+            <option>Música</option>
+            <option>Danza Contemporánea</option>
+            <option>Danza Árabe</option>
+            <option>Telas</option>
+            <option>Colegio Inicial</option>
+        </select>
+
+        <textarea name="conocio" placeholder="¿Cómo nos conociste?" class="border p-3 rounded w-full"></textarea>
+
+        <div>
+            <label class="font-semibold">Captcha de verificación: <span class="bg-gray-200 px-2 py-1 rounded">JELU2024</span></label>
+            <input class="border p-3 rounded w-full mt-2" placeholder="Ingrese el texto">
+        </div>
+
+        <button class="w-full bg-yellow-300 hover:bg-yellow-400 p-3 font-bold rounded">
+            Enviar
+        </button>
+    </form>
+</section>
+
+</body>
+</html>
