@@ -33,10 +33,10 @@
 
       <div class="collapse navbar-collapse" id="navMenu">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link nav-art" href="index.php#sobre">Sobre Nosotros</a></li>
-          <li class="nav-item"><a class="nav-link nav-art" href="index.php#cursos">Cursos</a></li>
-          <li class="nav-item"><a class="nav-link nav-art" href="index.php#galeria">Galería</a></li>
-          <li class="nav-item"><a class="nav-link nav-art" href="index.php#contacto">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link nav-art" href="index.html#sobre">Sobre Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link nav-art" href="index.html#cursos">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link nav-art" href="index.html#galeria">Galería</a></li>
+          <li class="nav-item"><a class="nav-link nav-art" href="index.html#contacto">Contacto</a></li>
         </ul>
       </div>
 
@@ -47,7 +47,7 @@
   <header class="program-hero d-flex align-items-center justify-content-center">
     <div class="program-overlay"></div>
     <div class="text-center program-hero-text">
-      <h1 class="hero-title">Programa de la Función</h1>
+      <h1 class="hero-title-programa">Programa de la Función</h1>
       <p class="hero-subtitle">Una noche de arte, movimiento y emoción</p>
     </div>
   </header>

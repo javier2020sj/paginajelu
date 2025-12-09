@@ -110,7 +110,7 @@ body {
   position:absolute;
   width:100%;
   height:100%;
-  background: linear-gradient(to bottom, rgba(255,255,255,0.2), rgba(255,255,255,0.9));
+  background: linear-gradient(to bottom, rgba(3, 3, 3, 0.2), rgba(165, 165, 165, 0.9));
 }
 .hero-logo { width:160px; margin-bottom:20px; }
 .hero-title {
@@ -118,6 +118,14 @@ body {
   font-size: 3rem;
   font-weight: 700;
   color: #ffffff; /* Blanco puro */
+  text-shadow: 0 3px 10px rgba(0,0,0,0.6); /* Sombra suave luminosa */
+}
+
+.hero-title-programa {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #141414; /* Blanco puro */
   text-shadow: 0 3px 10px rgba(0,0,0,0.6); /* Sombra suave luminosa */
 }
 .hero-subtitle { opacity:.8; }
@@ -128,7 +136,9 @@ body {
 .section-soft {
   background: var(--nude);
 }
-
+.program-hero{
+  padding-top: 10rem;
+}
 .soft-card {
   background: var(--blanco);
   border-radius: 12px;
