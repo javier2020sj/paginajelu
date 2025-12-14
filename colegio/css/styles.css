@@ -1,0 +1,198 @@
+/* -----------------------------------------
+   PALETA
+------------------------------------------ */
+:root {
+  --amarillo: #f5c400;
+  --nude: #f8f8f8;
+  --gris-texto: #333;
+  --gris-claro: #f5f5f5;
+  --blanco: #fff;
+}
+
+/* -----------------------------------------
+   TIPOGRAFÍA
+  ------------------------------------------ */
+body {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  color: var(--gris-texto);
+  background-color: var(--nude);
+  text-align: center;
+  justify-content: center !important;
+  margin: 0;
+
+  min-height: 100vh;
+}
+
+/*Contenedor principal */
+.contenedor {
+  display: flex;
+  margin: 0 auto;
+  width: 98%;
+  gap: 1rem;
+}
+
+.header-ppal {
+  background-image: url(../images/header.jpeg);
+  background-size: cover;
+  height: 95vh;
+  background-position: center top;
+}
+.header-funcion {
+  background-image: url(../images/header-funcion.jpeg);
+  background-size: cover;
+  height: 100vh;
+  background-position: center top;
+}
+@media only screen and (min-width: 1000px) {
+  header {
+    background-position: center -20rem;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  header {
+    background-position: center -30rem;
+  }
+}
+
+.fondo-opaco {
+  background-color: rgba(0, 0, 0, 0.568);
+}
+
+.texto-sombra {
+  text-shadow: 2px 2px 4px #000;
+  z-index: 1;
+}
+
+.footer {
+  background-color: white;
+  margin-top: 50px;
+}
+
+/* SOBRE NOSOTROS */
+.sobrenosotros {
+  background-color: white;
+}
+
+.mvv {
+  background-color: white;
+}
+
+.accordion-button {
+  background-color: #f4c842 !important; /* Amarillo JELÚ */
+  color: #000 !important;
+  font-weight: 600;
+  border-radius: 5rem;
+}
+.accordion-button {
+  background: rgba(255, 240, 200, 0.85) !important;
+  padding: 20px;
+  transition: 0.3s ease;
+}
+
+.accordion-item {
+  border-radius: 14px !important;
+  margin-bottom: 16px;
+  padding: 0;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+
+.accordion-body {
+  background: #fff9d9; /* amarillo muy suave */
+  border-top: 1px solid #e0c04d;
+  list-style: inside;
+}
+
+.navbar-transparente {
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.65) !important;
+  padding: 12px 0;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* CONTACTO */
+.contacto {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.btn-enviar {
+  background-color: rgb(229, 255, 0);
+  border: none;
+  border-radius: 0.5rem;
+}
+/* GALERIA */
+
+.carousel-item {
+  height: 500px; /* Altura fija para todos los ítems */
+}
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* o 'contain' */
+  object-position: center;
+}
+
+.galeria {
+  background-color: white;
+  align-items: center;
+  align-content: center;
+}
+
+.galeria img {
+  border-radius: 2rem;
+}
+
+.carousel-control-prev-icon {
+  color: #f4c842;
+  background-color: #000;
+  border-radius: 1rem;
+}
+.carousel-control-next-icon {
+  color: #f4c842;
+  background-color: #000;
+  border-radius: 1rem;
+}
+
+/* MATERIAS */
+.materias {
+  margin: 2rem;
+}
+.card {
+  border-radius: 8px;
+  border: 1px solid #cccccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px !important;
+  box-sizing: border-box;
+  width: 250px;
+  height: 250px;
+  transition: all linear 200ms;
+}
+.card:hover {
+  transform: scale(1.1);
+  transition: all linear 200ms;
+  z-index: 1;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+.card img {
+  width: 80%;
+  height: 80%;
+  object-fit: contain; /* o 'contain' */
+  object-position: center;
+}
+
+.card h1 {
+  font-size: large;
+}
+
+/* FUNCION */
+.ficha-tecnica {
+  background-color: #ffffff;
+  justify-content: center;
+  justify-items: center;
+}

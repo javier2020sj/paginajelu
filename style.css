@@ -38,6 +38,23 @@ body {
   color: var(--gris-texto) !important;
   font-weight: 500;
 }
+
+a{
+  color: black;
+  text-decoration: none; /* Quita el subrayado */
+}
+a:hover{
+  color: var(--amarillo) !important;
+  text-decoration: none; /* Quita el subrayado */
+}
+
+.nav-art-musica {
+  color: red !important;
+  font-weight: 500;
+}
+.nav-art-musica:hover {
+  color: var(--amarillo) !important;
+}
 .nav-art:hover {
   color: var(--amarillo) !important;
 }
@@ -113,6 +130,16 @@ body {
   max-width: 800px;      /* controla el ancho */
   margin: 0 auto;        /* lo centra */
   padding: 0 10px;       /* margen interno suave en móviles */
+  justify-content: center;
+  justify-items: center;
+  margin-top: 2rem;
+  
+}
+
+.programa-container
+{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 /* Estilo sugerido para el texto */
@@ -122,17 +149,98 @@ body {
   color: #444;
   text-align: center;    /* opcional: para estética artística */
 }
+
+.fondo-opaco {
+  background-color: rgba(90, 90, 90, 0.76);
+
+}
+.logo{
+  width: 180px;
+  height: auto;
+}
+.header-ppal {
+  background-image: url(img/rocknrolla.jpg);
+  background-size: cover;
+  height: 100vh;
+  background-position: center top;
+}
+.texto-sombra {
+  text-shadow: 2px 2px 4px #6e6e6e;
+  z-index: 1;
+  color: rgb(146, 146, 146);
+  text-justify: center;
+  justify-content: center;
+  justify-items: center;
+}
+.sinopsis-titulo{
+  font-size:x-large;
+  line-height: 1.7;
+  color: #444;
+  text-align: center; 
+}
+.sinopsis-direccion{
+  font-size: medium;
+  line-height: 1.7;
+  color: #444;
+
+  text-shadow: 2px 2px 4px #ffffff;
+  text-align: center; }
 .artistic-hero {
   width: 100%;
-  height: 80vh;
+  height: 90vh;
   background-image: url("img/head1.jpeg");
   background-size: cover;       /* IMPORTANTE: llena todo */
-  background-position: center -40rem;  /* Centra la imagen */
+  background-position: center bottom;  /* Centra la imagen */
   background-repeat: no-repeat; /* Evita repeticiones */
   position:relative;
-  offset-position: 100  ;
 }
 
+.artistic-musica {
+  width: 100%;
+  height: 80vh;
+  background-image: url("img/rocknrolla.jpg");
+  background-size: cover;       /* IMPORTANTE: llena todo */
+  background-position: center bottom;  /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita repeticiones */
+  position:relative;
+  z-index: 0;
+}
+
+@media only screen and (min-width: 700px) {
+  .artistic-hero {
+
+    background-image: url("img/head1.jpeg");
+       /* IMPORTANTE: llena todo */
+    background-position: center 5rem;  /* Centra la imagen */
+
+  
+  }}
+
+  @media only screen and (min-width: 900px) {
+    .artistic-hero {
+  
+      background-image: url("img/head1.jpeg");
+         /* IMPORTANTE: llena todo */
+      background-position: center 0rem;  /* Centra la imagen */
+    }
+}
+@media only screen and (min-width: 1200px) {
+  .artistic-hero {
+
+    background-image: url("img/head1.jpeg");
+       /* IMPORTANTE: llena todo */
+    background-position: center -10rem;  /* Centra la imagen */
+  }
+}
+
+@media only screen and (min-width: 1700px) {
+  .artistic-hero {
+
+    background-image: url("img/head1.jpeg");
+       /* IMPORTANTE: llena todo */
+    background-position: center -40rem;  /* Centra la imagen */
+  }
+}
 .hero-overlay {
   position:absolute;
   width:100%;
@@ -154,7 +262,26 @@ body {
   font-weight: 700;
   color: #141414; /* Blanco puro */
   text-shadow: 0 3px 10px rgba(0,0,0,0.6); /* Sombra suave luminosa */
+  z-index: 4;
 }
+
+.hero-title-musica {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffffff; /* Blanco puro */
+  text-shadow: 0 3px 10px rgba(0,0,0,0.6); /* Sombra suave luminosa */
+}
+
+.program-overlay-musica {
+  position:absolute;
+  width:100%;
+  height:100%;
+  background: rgba(255, 255, 255, 0.445);
+
+  z-index: 3;
+}
+.hero-subtitle-musica { color: white  ;}
 .hero-subtitle { opacity:.8; }
 
 /* -----------------------------------------
@@ -164,8 +291,9 @@ body {
   background: var(--nude);
 }
 .program-hero{
-  padding-top: 10rem;
+  padding-top: 5rem;
 }
+
 .soft-card {
   display: grid;
   height: 30rem; /* Alto fijo */

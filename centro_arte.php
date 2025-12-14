@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Instituto de Danzas</title>
+  <title>Centro de artes - Jelú</title>
 
   <!-- TIPOGRAFÍAS -->
   <link
@@ -43,19 +43,25 @@
       <div class="collapse navbar-collapse" id="navMenu">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link nav-art" href="#sobre">Sobre Nosotros</a>
+            <a class="nav-link nav-art" href="centro_arte.php#sobre">Sobre Nosotros</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link nav-art" href="#cursos">Cursos y Carreras</a>
+            <a class="nav-link nav-art" href="centro_arte.php#cursos">Cursos y Carreras</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link nav-art" href="#galeria">Galería</a>
+            <a class="nav-link nav-art" href="centro_arte.php#galeria">Galería</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link nav-art" href="#contacto">Contacto</a>
+            <a class="nav-link nav-art" href="centro_arte.php#staff">Staff</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link nav-art" href="programa.html">Programa función</a>
+            <a class="nav-link nav-art" href="centro_arte.php#contacto">Contacto</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-art-musica" href="musica.html"><strong>🎶LIVE MUSIC🎶</strong></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-art" href="programa.html">Romeo y Julieta</a>
           </li>
         </ul>
       </div>
@@ -188,6 +194,7 @@
                 <li><strong>Identidad: </strong>Fortalecemos el sentido de
                   pertenencia a nuestra comunidad y a nuestras raíces culturales.
                 </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -252,7 +259,7 @@
 
 
   <!-- ⭐ NUEVA SECCIÓN CURSOS Y CARRERAS (CARDS 3D FLIP) -->
-  <section id="cursos" class="container py-5">
+  <!-- <section id="cursos" class="container py-5">
     <h2 class="section-title artistic-title text-center">
       Cursos y Carreras
     </h2>
@@ -262,7 +269,6 @@
       class="carousel slide mt-5"
       data-bs-ride="carousel">
       <div class="carousel-inner">
-        <!-- CURSO 1 -->
         <div class="carousel-item active">
           <div class="d-flex justify-content-center">
             <div class="flip-card">
@@ -283,7 +289,6 @@
           </div>
         </div>
 
-        <!-- CURSO 2 -->
         <div class="carousel-item">
           <div class="d-flex justify-content-center">
             <div class="flip-card">
@@ -304,7 +309,6 @@
           </div>
         </div>
 
-        <!-- CURSO 3 -->
         <div class="carousel-item">
           <div class="d-flex justify-content-center">
             <div class="flip-card">
@@ -326,7 +330,6 @@
         </div>
       </div>
 
-      <!-- Controles -->
       <button
         class="carousel-control-prev"
         type="button"
@@ -342,8 +345,99 @@
         <span class="carousel-control-next-icon"></span>
       </button>
     </div>
-  </section>
+  </section> -->
 
+<section id="staff" class="container py-5">
+  <h2 class="section-title artistic-title text-center mb-4">
+    Staff
+  </h2>
+
+  <p class="text-center sinopsis" style="max-width: 700px; margin: 0 auto">
+    Nuestro equipo docente y artístico está formado por profesionales
+    apasionados que acompañan a cada alumno en su crecimiento técnico y
+    emocional.
+  </p>
+
+  <div class="row mt-5 g-4">
+    <!-- ITEM 1 -->
+    <div class="col-md-6">
+      <div class="staff-card p-4 text-center">
+        <img src="img/staff/Celeste.jpeg" class="staff-img mb-3" alt="Staff 1" />
+        <h4 class="staff-name">Celeste</h4>
+        <p class="staff-text">Dirección</p>
+      </div>
+    </div>
+    <!-- ITEM 3 -->
+    <div class="col-md-6">
+      <div class="staff-card p-4 text-center">
+        <img src="img/staff/Carla.jpeg" class="staff-img mb-3" alt="Staff 3" />
+        <h4 class="staff-name">Carla</h4>
+        <p class="staff-text">Secretaria</p>
+      </div>
+    </div>
+    <!-- ITEM 3 -->
+    <div class="col-md-6">
+      <div class="staff-card p-4 text-center">
+        <img src="img/staff/Said.jpeg" class="staff-img mb-3" alt="Staff 3" />
+        <h4 class="staff-name">Said</h4>
+        <p class="staff-text">Dabke, Idioma Arabe</p>
+      </div>
+    </div>
+    <!-- ITEM 2 -->
+    <div class="col-md-6">
+      <div class="staff-card p-4 text-center">
+        <img src="img/staff/Guillermina.jpeg" class="staff-img mb-3" alt="Staff 2" />
+        <h4 class="staff-name">Guillermina</h4>
+        <p class="staff-text">Teatro, recitación y arte escenico</p>
+      </div>
+    </div>
+
+    <!-- ITEM 4 -->
+    <div class="col-md-6">
+      <div class="staff-card p-4 text-center">
+        <img src="img/staff/Sol.jpeg" class="staff-img mb-3" alt="Staff 4" />
+        <h4 class="staff-name">Marisol</h4>
+        <p class="staff-text">Ritmos urbanos</p>
+      </div>
+    </div>
+    <!-- ITEM 5 -->
+    <div class="col-md-6">
+      <div class="staff-card p-4 text-center">
+        <img src="img/staff/Lucrecia.jpeg" class="staff-img mb-3" alt="Staff 4" />
+        <h4 class="staff-name">Lucrecia</h4>
+        <p class="staff-text">Danzas Arabes</p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="staff-card p-4 text-center">
+        <img src="img/staff/Seba.jpeg" class="staff-img mb-3" alt="Staff 4" />
+        <h4 class="staff-name">Sebastian</h4>
+        <p class="staff-text">Danza contemporanea</p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="staff-card p-4 text-center">
+        <img src="img/staff/Luna.jpeg" class="staff-img mb-3" alt="Staff 4" />
+        <h4 class="staff-name">Luna</h4>
+        <p class="staff-text">Danza clásica</p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="staff-card p-4 text-center">
+        <img src="img/staff/Caren.jpeg" class="staff-img mb-3" alt="Staff 4" />
+        <h4 class="staff-name">Karen</h4>
+        <p class="staff-text">Jardín de danza y teatro</p>
+      </div>
+    </div>
+        <div class="col-md-6">
+      <div class="staff-card p-4 text-center">
+        <img src="img/staff/hector.jpeg" class="staff-img mb-3" alt="Staff 3" />
+        <h4 class="staff-name">Hector</h4>
+        <p class="staff-text">Música</p>
+      </div>
+    </div>
+  </div>
+</section>
   <!-- GALERÍA -->
   <section id="galeria" class="gallery artistic-gradient py-5">
     <div class="container">
