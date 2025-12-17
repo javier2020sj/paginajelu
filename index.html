@@ -1,146 +1,260 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Complejo Jelú - Selección de Sitio</title>
 
     <!-- TIPOGRAFÍA -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
 
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'Poppins', sans-serif;
+    <style>/* 🌞 FLOTADOR COLONIA DE VERANO */
+.flotador-verano {
+  position: fixed;
+  top: 18%;
+  right: 6%;
+  width: 140px;
+  z-index: 9000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: flotar 4s ease-in-out infinite;
+  text-decoration: none;
+}
 
-            /* 🎨 Fondo Degradado Amarillo Artístico */
-            background: linear-gradient(135deg, #fde067, #f5c400, #f4b600);
-            background-size: 200% 200%;
-            animation: gradientMove 8s ease infinite;
+.flotador-verano img {
+  width: 100%;
+  filter: drop-shadow(0 12px 20px rgba(0,0,0,0.35));
+}
+
+.flotador-verano span {
+  margin-top: -10px;
+  background: rgba(255,255,255,0.85);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #333;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+/* Hover sutil */
+.flotador-click:hover {
+  transform: scale(1.06);
+}
+
+/* Animación flotante */
+@keyframes flotar {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .flotador-verano {
+    width: 90px;
+    top: auto;
+    bottom: 120px;
+    right: 12px;
+  }
+
+  .flotador-verano span {
+    font-size: 0.75rem;
+    padding: 4px 10px;
+  }
+}
+
+
+      /* -----------------------------------------
+   BOTÓN FLOTANTE WHATSAPP
+------------------------------------------ */
+      .whatsapp-float {
+        position: fixed;
+        bottom: 25px;
+        right: 25px;
+        width: 64px;
+        height: 64px;
+        background-color: #25d366;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+        z-index: 9999;
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+      }
+
+      .whatsapp-float img {
+        width: 34px;
+        height: 34px;
+      }
+
+      .whatsapp-float:hover {
+        transform: scale(1.12);
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.45);
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Poppins", sans-serif;
+
+        /* 🎨 Fondo Degradado Amarillo Artístico */
+        background: linear-gradient(135deg, #fde067, #f5c400, #f4b600);
+        background-size: 200% 200%;
+        animation: gradientMove 8s ease infinite;
+      }
+
+      /* Animación del fondo */
+      @keyframes gradientMove {
+        0% {
+          background-position: 0% 50%;
         }
-
-        /* Animación del fondo */
-        @keyframes gradientMove {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+        50% {
+          background-position: 100% 50%;
         }
-
-        .container {
-            text-align: center;
-            animation: fadeIn 1s ease forwards;
-            opacity: 0;
+        100% {
+          background-position: 0% 50%;
         }
+      }
 
-        /* Animación de entrada */
-        @keyframes fadeIn {
-            to { opacity: 1; }
+      .container {
+        text-align: center;
+        animation: fadeIn 1s ease forwards;
+        opacity: 0;
+      }
+
+      /* Animación de entrada */
+      @keyframes fadeIn {
+        to {
+          opacity: 1;
         }
+      }
 
-        h1 {
-            font-size: 2.2rem;
-            margin-bottom: 40px;
-            color: #222;
-            font-weight: 600;
-            letter-spacing: 1px;
-            text-shadow: 1px 1px 3px rgba(255,255,255,0.6);
+      h1 {
+        font-size: 2.2rem;
+        margin-bottom: 40px;
+        color: #222;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.6);
+      }
+
+      .logo-wrapper {
+        display: flex;
+        gap: 50px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .logo-card {
+        width: 240px;
+        background: rgba(255, 255, 255, 0.75);
+        padding: 25px;
+        border-radius: 18px;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+        cursor: pointer;
+        text-decoration: none;
+        color: black;
+        transition: 0.3s ease;
+        position: relative;
+        overflow: hidden;
+        animation: float 4s ease-in-out infinite;
+      }
+
+      /* Animación suave flotante */
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0);
         }
-
-        .logo-wrapper {
-            display: flex;
-            gap: 50px;
-            justify-content: center;
-            flex-wrap: wrap;
+        50% {
+          transform: translateY(-8px);
         }
+      }
 
+      .logo-card:hover {
+        transform: scale(1.08);
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+      }
+
+      /* ✨ Brillo al pasar el mouse */
+      .logo-card::before {
+        content: "";
+        position: absolute;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.4);
+        transform: skewY(-10deg);
+        transition: 0.4s;
+      }
+
+      .logo-card:hover::before {
+        top: 100%;
+      }
+
+      .logo-card img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 12px;
+      }
+
+      .logo-title {
+        font-size: 1.3rem;
+        font-weight: 600;
+        margin-top: 5px;
+      }
+
+      @media (max-width: 600px) {
         .logo-card {
-            width: 240px;
-            background: rgba(255,255,255,0.75);
-            padding: 25px;
-            border-radius: 18px;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
-            cursor: pointer;
-            text-decoration: none;
-            color: black;
-            transition: 0.3s ease;
-            position: relative;
-            overflow: hidden;
-            animation: float 4s ease-in-out infinite;
+          width: 180px;
         }
-
-        /* Animación suave flotante */
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-8px); }
-        }
-
-        .logo-card:hover {
-            transform: scale(1.08);
-            box-shadow: 0 12px 40px rgba(0,0,0,0.25);
-        }
-
-        /* ✨ Brillo al pasar el mouse */
-        .logo-card::before {
-            content: "";
-            position: absolute;
-            top: -100%;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(255,255,255,0.4);
-            transform: skewY(-10deg);
-            transition: 0.4s;
-        }
-
-        .logo-card:hover::before {
-            top: 100%;
-        }
-
-        .logo-card img {
-            width: 100%;
-            height: auto;
-            margin-bottom: 12px;
-        }
-
-        .logo-title {
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin-top: 5px;
-        }
-
-        @media (max-width: 600px) {
-            .logo-card {
-                width: 180px;
-            }
-        }
+      }
     </style>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <div class="container">
+      <div class="logo-wrapper">
+        <!-- LOGO 1: Centro de Arte -->
+        <a href="centro_arte.php" class="logo-card">
+          <img src="img/logo_ca.png" alt="Centro de Arte y Recreación JELÚ" />
+        </a>
 
-
-        <div class="logo-wrapper">
-
-            <!-- LOGO 1: Centro de Arte -->
-            <a href="centro_arte.php" class="logo-card">
-                <img src="img/logo_ca.png" alt="Centro de Arte y Recreación JELÚ">
-            </a>
-
-            <!-- LOGO 2: Colegio -->
-            <a href="colegio/index.html" class="logo-card">
-                <img src="img/logo_colegio.png" alt="Colegio JELÚ">
-            </a>
-
-        </div>
-
+        <!-- LOGO 2: Colegio -->
+        <a href="colegio/index.php" class="logo-card">
+          <img src="img/logo_colegio.png" alt="Colegio JELÚ" />
+        </a>
+      </div>
     </div>
+    <a
+      href="https://wa.me/5492645838325?text=Hola,%20quisiera%20hacer%20una%20consulta"
+      class="whatsapp-float"
+      target="_blank"
+      aria-label="Consultar por WhatsApp"
+    >
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+        alt="WhatsApp"
+      />
+    </a>
 
-</body>
+<!-- FLOTADOR COLONIA DE VERANO (CLICKEABLE) -->
+<a
+  href="https://wa.me/5492645838325?text=Hola,%20quisiera%20información%20de%20la%20colonia%20de%20verano,%20Gracias"
+  class="flotador-verano flotador-click"
+  title="Colonia de Verano"
+>
+  <img src="img/colonia.png" alt="Colonia de Verano">
+</a>
+  </body>
 </html>

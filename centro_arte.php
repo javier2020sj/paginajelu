@@ -57,11 +57,29 @@
           <li class="nav-item">
             <a class="nav-link nav-art" href="centro_arte.php#contacto">Contacto</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link nav-art-musica" href="musica.html"><strong>🎶LIVE MUSIC🎶</strong></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link nav-art" href="programa.html">Romeo y Julieta</a>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle nav-art"
+              href="#"
+              id="submenuEventos"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Eventos
+            </a>
+
+            <ul class="dropdown-menu dropdown-menu-end glass-dropdown" aria-labelledby="submenuEventos">
+              <li>
+                <a class="dropdown-item nav-art" href="musica.php">
+                  LIVE MUSIC
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item nav-art" href="programa.php">
+                  Romeo y Julieta
+                </a>
+              </li>
+            </ul>
           </li>
         </ul>
       </div>
@@ -347,97 +365,97 @@
     </div>
   </section> -->
 
-<section id="staff" class="container py-5">
-  <h2 class="section-title artistic-title text-center mb-4">
-    Staff
-  </h2>
+  <section id="staff" class="container py-5">
+    <h2 class="section-title artistic-title text-center mb-4">
+      Staff
+    </h2>
 
-  <p class="text-center sinopsis" style="max-width: 700px; margin: 0 auto">
-    Nuestro equipo docente y artístico está formado por profesionales
-    apasionados que acompañan a cada alumno en su crecimiento técnico y
-    emocional.
-  </p>
+    <p class="text-center sinopsis" style="max-width: 700px; margin: 0 auto">
+      Nuestro equipo docente y artístico está formado por profesionales
+      apasionados que acompañan a cada alumno en su crecimiento técnico y
+      emocional.
+    </p>
 
-  <div class="row mt-5 g-4">
-    <!-- ITEM 1 -->
-    <div class="col-md-6">
-      <div class="staff-card p-4 text-center">
-        <img src="img/staff/Celeste.jpeg" class="staff-img mb-3" alt="Staff 1" />
-        <h4 class="staff-name">Celeste</h4>
-        <p class="staff-text">Dirección</p>
+    <div class="row mt-5 g-4">
+      <!-- ITEM 1 -->
+      <div class="col-md-6">
+        <div class="staff-card p-4 text-center">
+          <img src="img/staff/Celeste.jpeg" class="staff-img mb-3" alt="Staff 1" />
+          <h4 class="staff-name">Celeste</h4>
+          <p class="staff-text">Dirección</p>
+        </div>
       </div>
-    </div>
-    <!-- ITEM 3 -->
-    <div class="col-md-6">
-      <div class="staff-card p-4 text-center">
-        <img src="img/staff/Carla.jpeg" class="staff-img mb-3" alt="Staff 3" />
-        <h4 class="staff-name">Carla</h4>
-        <p class="staff-text">Secretaria</p>
+      <!-- ITEM 3 -->
+      <div class="col-md-6">
+        <div class="staff-card p-4 text-center">
+          <img src="img/staff/Carla.jpeg" class="staff-img mb-3" alt="Staff 3" />
+          <h4 class="staff-name">Carla</h4>
+          <p class="staff-text">Secretaria</p>
+        </div>
       </div>
-    </div>
-    <!-- ITEM 3 -->
-    <div class="col-md-6">
-      <div class="staff-card p-4 text-center">
-        <img src="img/staff/Said.jpeg" class="staff-img mb-3" alt="Staff 3" />
-        <h4 class="staff-name">Said</h4>
-        <p class="staff-text">Dabke, Idioma Arabe</p>
+      <!-- ITEM 3 -->
+      <div class="col-md-6">
+        <div class="staff-card p-4 text-center">
+          <img src="img/staff/Said.jpeg" class="staff-img mb-3" alt="Staff 3" />
+          <h4 class="staff-name">Said</h4>
+          <p class="staff-text">Dabke, Idioma Arabe</p>
+        </div>
       </div>
-    </div>
-    <!-- ITEM 2 -->
-    <div class="col-md-6">
-      <div class="staff-card p-4 text-center">
-        <img src="img/staff/Guillermina.jpeg" class="staff-img mb-3" alt="Staff 2" />
-        <h4 class="staff-name">Guillermina</h4>
-        <p class="staff-text">Teatro, recitación y arte escenico</p>
+      <!-- ITEM 2 -->
+      <div class="col-md-6">
+        <div class="staff-card p-4 text-center">
+          <img src="img/staff/Guillermina.jpeg" class="staff-img mb-3" alt="Staff 2" />
+          <h4 class="staff-name">Guillermina</h4>
+          <p class="staff-text">Teatro, recitación y arte escenico</p>
+        </div>
       </div>
-    </div>
 
-    <!-- ITEM 4 -->
-    <div class="col-md-6">
-      <div class="staff-card p-4 text-center">
-        <img src="img/staff/Sol.jpeg" class="staff-img mb-3" alt="Staff 4" />
-        <h4 class="staff-name">Marisol</h4>
-        <p class="staff-text">Ritmos urbanos</p>
+      <!-- ITEM 4 -->
+      <div class="col-md-6">
+        <div class="staff-card p-4 text-center">
+          <img src="img/staff/Sol.jpeg" class="staff-img mb-3" alt="Staff 4" />
+          <h4 class="staff-name">Marisol</h4>
+          <p class="staff-text">Ritmos urbanos</p>
+        </div>
+      </div>
+      <!-- ITEM 5 -->
+      <div class="col-md-6">
+        <div class="staff-card p-4 text-center">
+          <img src="img/staff/Lucrecia.jpeg" class="staff-img mb-3" alt="Staff 4" />
+          <h4 class="staff-name">Lucrecia</h4>
+          <p class="staff-text">Danzas Arabes</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="staff-card p-4 text-center">
+          <img src="img/staff/Seba.jpeg" class="staff-img mb-3" alt="Staff 4" />
+          <h4 class="staff-name">Sebastian</h4>
+          <p class="staff-text">Danza contemporanea</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="staff-card p-4 text-center">
+          <img src="img/staff/Luna.jpeg" class="staff-img mb-3" alt="Staff 4" />
+          <h4 class="staff-name">Luna</h4>
+          <p class="staff-text">Danza clásica</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="staff-card p-4 text-center">
+          <img src="img/staff/Caren.jpeg" class="staff-img mb-3" alt="Staff 4" />
+          <h4 class="staff-name">Karen</h4>
+          <p class="staff-text">Jardín de danza y teatro</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="staff-card p-4 text-center">
+          <img src="img/staff/hector.jpeg" class="staff-img mb-3" alt="Staff 3" />
+          <h4 class="staff-name">Hector</h4>
+          <p class="staff-text">Música</p>
+        </div>
       </div>
     </div>
-    <!-- ITEM 5 -->
-    <div class="col-md-6">
-      <div class="staff-card p-4 text-center">
-        <img src="img/staff/Lucrecia.jpeg" class="staff-img mb-3" alt="Staff 4" />
-        <h4 class="staff-name">Lucrecia</h4>
-        <p class="staff-text">Danzas Arabes</p>
-      </div>
-    </div>
-    <div class="col-md-6">
-      <div class="staff-card p-4 text-center">
-        <img src="img/staff/Seba.jpeg" class="staff-img mb-3" alt="Staff 4" />
-        <h4 class="staff-name">Sebastian</h4>
-        <p class="staff-text">Danza contemporanea</p>
-      </div>
-    </div>
-    <div class="col-md-6">
-      <div class="staff-card p-4 text-center">
-        <img src="img/staff/Luna.jpeg" class="staff-img mb-3" alt="Staff 4" />
-        <h4 class="staff-name">Luna</h4>
-        <p class="staff-text">Danza clásica</p>
-      </div>
-    </div>
-    <div class="col-md-6">
-      <div class="staff-card p-4 text-center">
-        <img src="img/staff/Caren.jpeg" class="staff-img mb-3" alt="Staff 4" />
-        <h4 class="staff-name">Karen</h4>
-        <p class="staff-text">Jardín de danza y teatro</p>
-      </div>
-    </div>
-        <div class="col-md-6">
-      <div class="staff-card p-4 text-center">
-        <img src="img/staff/hector.jpeg" class="staff-img mb-3" alt="Staff 3" />
-        <h4 class="staff-name">Hector</h4>
-        <p class="staff-text">Música</p>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
   <!-- GALERÍA -->
   <section id="galeria" class="gallery artistic-gradient py-5">
     <div class="container">
@@ -448,134 +466,30 @@
         class="carousel slide mt-4"
         data-bs-ride="carousel">
         <div class="carousel-inner rounded-4 shadow-lg">
-          <!-- IMAGEN 1 -->
-          <div class="carousel-item active">
-            <img
-              src="img/ca/01.jpeg"
-              class="d-block w-100 gallery-img"
-              data-bs-toggle="modal"
-              data-bs-target="#modalImagen"
-              onclick="document.getElementById('imagenAmpliada').src=this.src" />
-          </div>
+          <div class="carousel-inner rounded-4 shadow-lg">
+            <?php
+            $dir = "img/funcion_teatro/";
+            $imagenes = array_diff(scandir($dir), array('.', '..'));
 
-          <!-- IMAGEN 2 -->
-          <div class="carousel-item">
+            $primera = true;
+            foreach ($imagenes as $img) {
+              // Filtrar solo imágenes
+              if (preg_match('/\.(jpg|jpeg|png|webp)$/i', $img)) {
+                $activeClass = $primera ? 'active' : '';
+                $primera = false;
+                echo '
+        <div class="carousel-item ' . $activeClass . '">
             <img
-              src="img/ca/02.jpeg"
-              class="d-block w-100 gallery-img"
-              data-bs-toggle="modal"
-              data-bs-target="#modalImagen"
-              onclick="document.getElementById('imagenAmpliada').src=this.src" />
-          </div>
-
-          <!-- IMAGEN 3 -->
-          <div class="carousel-item">
-            <img
-              src="img/ca/03.jpeg"
-              class="d-block w-100 gallery-img"
-              data-bs-toggle="modal"
-              data-bs-target="#modalImagen"
-              onclick="document.getElementById('imagenAmpliada').src=this.src" />
-          </div>
-
-          <!-- IMAGEN 4 -->
-          <div class="carousel-item">
-            <img
-              src="img/ca/04.jpeg"
-              class="d-block w-100 gallery-img"
-              data-bs-toggle="modal"
-              data-bs-target="#modalImagen"
-              onclick="document.getElementById('imagenAmpliada').src=this.src" />
-          </div>
-
-          <!-- IMAGEN 5 -->
-          <div class="carousel-item">
-            <img
-              src="img/ca/05.jpeg"
-              class="d-block w-100 gallery-img"
-              data-bs-toggle="modal"
-              data-bs-target="#modalImagen"
-              onclick="document.getElementById('imagenAmpliada').src=this.src" />
-          </div>
-
-          <!-- IMAGEN 6 -->
-          <div class="carousel-item">
-            <img
-              src="img/ca/06.jpeg"
-              class="d-block w-100 gallery-img"
-              data-bs-toggle="modal"
-              data-bs-target="#modalImagen"
-              onclick="document.getElementById('imagenAmpliada').src=this.src" />
-          </div>
-
-          <!-- IMAGEN 7 -->
-          <div class="carousel-item">
-            <img
-              src="img/ca/07.jpeg"
-              class="d-block w-100 gallery-img"
-              data-bs-toggle="modal"
-              data-bs-target="#modalImagen"
-              onclick="document.getElementById('imagenAmpliada').src=this.src" />
-          </div>
-
-          <!-- IMAGEN 8 -->
-          <div class="carousel-item">
-            <img
-              src="img/ca/08.jpeg"
-              class="d-block w-100 gallery-img"
-              data-bs-toggle="modal"
-              data-bs-target="#modalImagen"
-              onclick="document.getElementById('imagenAmpliada').src=this.src" />
-          </div>
-
-          <!-- IMAGEN 9 -->
-          <div class="carousel-item">
-            <img
-              src="img/ca/09.jpeg"
-              class="d-block w-100 gallery-img"
-              data-bs-toggle="modal"
-              data-bs-target="#modalImagen"
-              onclick="document.getElementById('imagenAmpliada').src=this.src" />
-          </div>
-
-          <!-- IMAGEN 10 -->
-          <div class="carousel-item">
-            <img
-              src="img/ca/10.jpeg"
-              class="d-block w-100 gallery-img"
-              data-bs-toggle="modal"
-              data-bs-target="#modalImagen"
-              onclick="document.getElementById('imagenAmpliada').src=this.src" />
-          </div>
-
-          <!-- IMAGEN 11 -->
-          <div class="carousel-item">
-            <img
-              src="img/ca/11.jpeg"
-              class="d-block w-100 gallery-img"
-              data-bs-toggle="modal"
-              data-bs-target="#modalImagen"
-              onclick="document.getElementById('imagenAmpliada').src=this.src" />
-          </div>
-
-          <!-- IMAGEN 12 -->
-          <div class="carousel-item">
-            <img
-              src="img/ca/12.jpeg"
-              class="d-block w-100 gallery-img"
-              data-bs-toggle="modal"
-              data-bs-target="#modalImagen"
-              onclick="document.getElementById('imagenAmpliada').src=this.src" />
-          </div>
-
-          <!-- IMAGEN 13 -->
-          <div class="carousel-item">
-            <img
-              src="img/ca/13.jpeg"
-              class="d-block w-100 gallery-img"
-              data-bs-toggle="modal"
-              data-bs-target="#modalImagen"
-              onclick="document.getElementById('imagenAmpliada').src=this.src" />
+                src="' . $dir . $img . '"
+                class="d-block w-100 gallery-img"
+                data-bs-toggle="modal"
+                data-bs-target="#modalImagen"
+                onclick="document.getElementById(\'imagenAmpliada\').src=this.src"
+            />
+        </div>';
+              }
+            }
+            ?>
           </div>
         </div>
 
@@ -666,7 +580,15 @@
       </div>
     </div>
   </div>
-
+ <!-- BOTÓN FLOTANTE WHATSAPP -->
+<a
+  href="https://wa.me/5492645838325?text=Hola,%20quisiera%20hacer%20una%20consulta"
+  class="whatsapp-float"
+  target="_blank"
+  aria-label="Consultar por WhatsApp"
+>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
 </body>
 
 </html>

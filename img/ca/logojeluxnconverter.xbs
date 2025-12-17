@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><XnView_script version="1.0" name="logojeluxnconverter">
+    <Text text="           JELU&#10;| Centro de Arte |" position="8" marginX="-10" marginY="-20" angle="0" fontName="Serif" fontSize="12" isBold="false" isItalic="false" isUnderline="false" isStrike="false" align="0" fontUnit="0" antiAlias="true" textColor="#ffffff" textOpacity="100" fillWidth="false" useBorder="false" borderColor="#000000" borderOpacity="100" borderSize="1" useFill="false" fillColor="#000000" fillOpacity="100" useOutline="false" outlineColor="#000000" outlineSize="0" useShadow="false" shadowColor="#000000" shadowOffsetY="3" shadowOffsetX="3" shadowBlur="0"/>
+    <Watermark filename="/var/www/html/jelu/img/ca/logofotos.png" opacity="100" no_alpha="false" position="8" delta_x="-20" delta_y="-60" perc="10" size="3" perc_mode="0" _collapse="false"/>
+    <Output folder="" filename="{Filename}_resultado" case="0" startIndex="1" format="">
+        <Options overwrite="1" orgDate="false" keepMeta="true" keepICC="false" keepFolder="false" checkFilesize="false" keepParentFolder="false" keepExtension="false" delOrg="false" multipage="false" allPages="false" openExplorer="false" beep="true" openBrowser="false" clearItems="false"/>
+        <JPEG useJPEGli="false" quality="85" progressive="false" optimizeHuffman="true" rebuildThumb="true" orgQuality="false" DCTMethod="2" subSampling="2" smoothFactor="0"/>
+        <TGA compress="false" bottomUp="false"/>
+        <TIFF compress="3" quality="80" compressBW="6" oneStrip="false"/>
+        <BMP compress="false" hdrOS2="false"/>
+        <PNG level="9" interlaced="false" filter="0"/>
+        <GIF interlaced="false" hdr87a="false"/>
+        <PCX compress="false"/>
+        <WEBP method="0" quality="80" filesize="128" compress="4" strength="60" sharpness="0" preset="0" sharpyuv="false"/>
+        <JPEGLI useJPEGli="true" quality="85" progressive="false" optimizeHuffman="true" rebuildThumb="true" orgQuality="false" DCTMethod="2" subSampling="2" smoothFactor="0" useXYB="false"/>
+        <JP2 mode="0" quality="80" ratio="4" fileSize="100"/>
+        <PDF compress="2" compressGrey="2" compressBW="3" quality="80"/>
+        <JXR quality="80" colorFormat="0" filter="0"/>
+        <AVIF quality="80" format="0" speed="5"/>
+        <JPEGXL quality="80" lossless="true" effort="7"/>
+        <HEIC quality="80"/>
+        <FORMATS_SETTINGS keepEXIF="true" keepICC="true" keepIPTC="true" keepXMP="true"/>
+    </Output>
+</XnView_script>
